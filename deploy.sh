@@ -38,28 +38,28 @@ echo -e "${GREEN}Uploading files...${NC}"
 
 # Upload each file
 echo "Uploading secrets.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/secrets.py :secrets.py || { echo -e "${RED}Failed to upload secrets.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/secrets.py :secrets.py || { echo -e "${RED}Failed to upload secrets.py${NC}"; exit 1; }
 
 echo "Uploading urequests.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/urequests.py :urequests.py || { echo -e "${RED}Failed to upload urequests.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/urequests.py :urequests.py || { echo -e "${RED}Failed to upload urequests.py${NC}"; exit 1; }
 
 echo "Uploading humansinspace_landscape.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/humansinspace_landscape.py :humansinspace_landscape.py || { echo -e "${RED}Failed to upload humansinspace_landscape.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/humansinspace_landscape.py :humansinspace_landscape.py || { echo -e "${RED}Failed to upload humansinspace_landscape.py${NC}"; exit 1; }
 
 echo "Uploading humansinspace_color.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/humansinspace_color.py :humansinspace_color.py || { echo -e "${RED}Failed to upload humansinspace_color.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/humansinspace_color.py :humansinspace_color.py || { echo -e "${RED}Failed to upload humansinspace_color.py${NC}"; exit 1; }
 
 echo "Uploading webserver.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/webserver.py :webserver.py || { echo -e "${RED}Failed to upload webserver.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/webserver.py :webserver.py || { echo -e "${RED}Failed to upload webserver.py${NC}"; exit 1; }
 
 echo "Uploading ntptime.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/ntptime.py :ntptime.py || { echo -e "${RED}Failed to upload ntptime.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/ntptime.py :ntptime.py || { echo -e "${RED}Failed to upload ntptime.py${NC}"; exit 1; }
 
 echo "Uploading config.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/config.py :config.py || { echo -e "${RED}Failed to upload config.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/config.py :config.py || { echo -e "${RED}Failed to upload config.py${NC}"; exit 1; }
 
 echo "Uploading main.py..."
-$MPREMOTE connect $PICO_DEVICE fs cp sync/main.py :main.py || { echo -e "${RED}Failed to upload main.py${NC}"; exit 1; }
+$MPREMOTE connect $PICO_DEVICE fs cp src/main.py :main.py || { echo -e "${RED}Failed to upload main.py${NC}"; exit 1; }
 
 echo -e "\n${GREEN}All files uploaded successfully!${NC}"
 echo -e "${YELLOW}Running main.py...${NC}\n"
