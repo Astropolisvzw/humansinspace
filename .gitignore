@@ -1,0 +1,24 @@
+# Secrets and credentials
+sync/secrets.py
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDEs
+.vscode/
+.micropico
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MicroPython device files (created on Pico)
+*.txt
+
+# Vendor code
+Pico_ePaper_Code/
