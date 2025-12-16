@@ -9,6 +9,11 @@ RED='\033[0;31m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+# Kill any existing mpremote processes to avoid conflicts
+echo -e "${YELLOW}Cleaning up any existing processes...${NC}"
+pkill -9 -f mpremote 2>/dev/null
+sleep 1
+
 echo -e "${GREEN}Deploying Humans in Space to Pico W...${NC}"
 
 # Find mpremote

@@ -6,7 +6,7 @@
 2. Connect your Pico W (the MicroPico extension should auto-detect it)
 3. Open the Command Palette (Cmd+Shift+P)
 4. Type and select: **"MicroPico: Upload project to Pico"**
-5. The extension will sync all files from the `sync/` folder to your Pico
+5. The extension will sync all files from the `src/` folder to your Pico
 6. The Pico will automatically run `main.py` and display the landscape view
 
 ## Method 2: Manual mpremote (for automation later)

@@ -19,7 +19,7 @@ This is a MicroPython project for Raspberry Pi Pico W that displays the current 
 
 ## Project Structure
 
-- `sync/` - Directory containing code that syncs to the Pico (configured via .vscode/settings.json)
+- `src/` - Directory containing code that syncs to the Pico (configured via .vscode/settings.json)
   - `humansinspace.py` - Full application combining e-paper display, API query, and formatted output
   - `epaper.py` - Waveshare 2.9" e-Paper display driver (EPD_2IN9_D class)
   - `wifi.py` - WiFi connection setup using credentials from secrets.py
@@ -40,7 +40,7 @@ This project uses the MicroPico VS Code extension for development and deployment
 - visualstudioexptteam.vscodeintellicode
 
 **MicroPico Configuration** (in .vscode/settings.json):
-- Sync folder: `sync/` - Only files in this directory are uploaded to the Pico
+- Sync folder: `src/` - Only files in this directory are uploaded to the Pico
 - Auto-opens on start
 
 ## Working with the Code
@@ -50,11 +50,11 @@ MicroPython imports like `machine`, `framebuf`, `utime`, `urequests`, and `ujson
 
 ### Deploying to Pico
 1. Connect Pico W via USB
-2. Use MicroPico extension commands to upload files from `sync/` directory
+2. Use MicroPico extension commands to upload files from `src/` directory
 3. Run `humansinspace.py` from the Pico's REPL or set as main.py
 
 ### WiFi Configuration
-Edit `sync/secrets.py` with your network credentials before deploying. This file contains plain-text credentials and should not be committed to public repositories.
+Edit `src/secrets.py` with your network credentials before deploying. This file contains plain-text credentials and should not be committed to public repositories.
 
 ## Key Architecture Concepts
 
@@ -88,13 +88,13 @@ The humansinspace.py implementation displays up to 8 astronauts with truncated n
 ## Common Operations
 
 ### Run the main application
-Upload and execute `sync/humansinspace.py` on the Pico via MicroPico extension.
+Upload and execute `src/humansinspace.py` on the Pico via MicroPico extension.
 
 ### Test e-paper display only
-Upload and run `sync/epaper.py` which has a test pattern in its `__main__` block.
+Upload and run `src/epaper.py` which has a test pattern in its `__main__` block.
 
 ### Test API connection
-Upload and run `sync/humansinspace.py` (the minimal version) to test API connectivity without display.
+Upload and run `src/humansinspace.py` (the minimal version) to test API connectivity without display.
 
 ## Important Notes
 
